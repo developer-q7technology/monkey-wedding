@@ -1,235 +1,133 @@
 .app {
   min-height: 100vh;
   padding: 0;
-  background: linear-gradient(135deg, var(--accent-cream) 0%, var(--accent-pink) 100%);
+  background: var(--white);
 }
 
 .header {
   text-align: center;
-  padding: 80px 40px 60px;
-  margin-bottom: 60px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid var(--primary-light);
-  box-shadow: var(--shadow-md);
-  position: relative;
-}
-
-.header::before {
-  content: '♥';
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2em;
-  color: var(--primary-color);
-  opacity: 0.6;
+  padding: 120px 40px;
+  background: var(--sage-green);
+  color: var(--white);
 }
 
 .header h1 {
-  font-size: 3.5em;
-  margin-bottom: 15px;
-  color: var(--text-dark);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 6em;
+  margin-bottom: 20px;
+  color: var(--white);
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
-.header p {
-  font-size: 1.2em;
-  color: var(--text-light);
+.header .date {
+  font-size: 1.25em;
+  color: var(--white);
   font-weight: 300;
-  letter-spacing: 0.5px;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-.header .divider {
-  width: 100px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-  margin: 20px auto;
+  letter-spacing: 1px;
 }
 
 .main-content {
-  max-width: 1400px;
+  max-width: 1024px;
   margin: 0 auto;
-  padding: 0 20px 60px;
+  padding: 60px 20px;
 }
 
 .upload-section {
-  margin-bottom: 80px;
-  background: var(--white);
-  border-radius: 20px;
-  padding: 50px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(212, 175, 55, 0.1);
+  margin-bottom: 60px;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
 }
 
 .upload-section h2 {
-  margin-bottom: 30px;
-  font-size: 2.2em;
-  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2em;
   color: var(--text-dark);
-  position: relative;
-  padding-bottom: 15px;
 }
 
-.upload-section h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--primary-color);
-  border-radius: 2px;
+.upload-section p {
+  margin-bottom: 20px;
+  color: var(--text-light);
+  font-size: 1.1em;
+}
+
+.gallery-section {
+  padding: 40px 20px;
 }
 
 .gallery-section h2 {
-  margin-bottom: 40px;
-  font-size: 2.2em;
+  margin-bottom: 30px;
+  font-size: 2em;
   text-align: center;
   color: var(--text-dark);
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.gallery-section h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--primary-color);
-  border-radius: 2px;
 }
 
 /* Tablet styles */
 @media (max-width: 768px) {
   .header {
-    padding: 50px 20px 35px;
-    margin-bottom: 40px;
-  }
-
-  .header::before {
-    top: 20px;
-    font-size: 1.5em;
+    padding: 80px 20px;
   }
 
   .header h1 {
-    font-size: 2.2em;
-    letter-spacing: 0.5px;
+    font-size: 4em;
   }
 
-  .header p {
-    font-size: 1em;
-    padding: 0 10px;
-  }
-
-  .header .divider {
-    width: 80px;
-    margin: 15px auto;
+  .header .date {
+    font-size: 1.1em;
   }
 
   .main-content {
-    padding: 0 15px 40px;
+    padding: 40px 15px;
   }
 
   .upload-section {
-    padding: 35px 25px;
-    border-radius: 15px;
-    margin-bottom: 60px;
+    padding: 30px 15px;
+    margin-bottom: 40px;
   }
 
   .upload-section h2,
   .gallery-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 25px;
-    padding-bottom: 12px;
-  }
-
-  .upload-section h2::after,
-  .gallery-section h2::after {
-    width: 50px;
-    height: 2.5px;
+    font-size: 1.6em;
   }
 }
 
 /* Mobile styles */
 @media (max-width: 480px) {
   .header {
-    padding: 40px 15px 30px;
-    margin-bottom: 30px;
-  }
-
-  .header::before {
-    top: 15px;
-    font-size: 1.2em;
+    padding: 60px 15px;
   }
 
   .header h1 {
-    font-size: 1.6em;
-    letter-spacing: 0.3px;
-    margin-bottom: 12px;
-    line-height: 1.2;
+    font-size: 3em;
   }
 
-  .header p {
-    font-size: 0.9em;
-    padding: 0 5px;
-    line-height: 1.6;
-  }
-
-  .header .divider {
-    width: 60px;
-    margin: 12px auto;
+  .header .date {
+    font-size: 1em;
   }
 
   .main-content {
-    padding: 0 12px 30px;
+    padding: 30px 12px;
   }
 
   .upload-section {
-    padding: 25px 15px;
-    border-radius: 12px;
-    margin-bottom: 40px;
+    padding: 25px 12px;
+    margin-bottom: 30px;
   }
 
   .upload-section h2,
   .gallery-section h2 {
     font-size: 1.4em;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-  }
-
-  .upload-section h2::after,
-  .gallery-section h2::after {
-    width: 40px;
-    height: 2px;
   }
 }
 
 /* Extra small mobile styles */
 @media (max-width: 360px) {
   .header {
-    padding: 35px 12px 25px;
+    padding: 50px 12px;
   }
 
   .header h1 {
-    font-size: 1.4em;
-  }
-
-  .header p {
-    font-size: 0.85em;
-  }
-
-  .upload-section {
-    padding: 20px 12px;
+    font-size: 2.5em;
   }
 
   .upload-section h2,

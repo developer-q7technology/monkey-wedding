@@ -15,19 +15,19 @@ function App() {
     <AuthWrapper>
       <div className="app">
         <header className="header">
-          <h1>Gabby & Leighton's Big Day</h1>
-          <div className="divider"></div>
-          <p>Share your favorite moments from our special day!</p>
+          <h1>Gabrielle & Leighton</h1>
+          <p className="date">Friday 12th December 2025</p>
         </header>
 
         <main className="main-content">
           <section className="upload-section">
-            <h2>Upload Your Photos</h2>
+            <h2>Share Your Photos</h2>
+            <p>We'd love to see the day through your eyes!</p>
             <PhotoUpload onUploadComplete={handleUploadComplete} />
           </section>
 
           <section className="gallery-section">
-            <h2>Our Wedding Gallery</h2>
+            <h2>Gallery</h2>
             <PhotoGallery refreshTrigger={refreshTrigger} />
           </section>
         </main>
